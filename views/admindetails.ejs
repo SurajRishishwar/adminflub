@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/userdetails.css" />
+    <title><%=title%></title>
+  </head>
+  <body>
+    <%if(locals.user){%>
+          
+      <div>
+          <a href="/admin">Home</a>
+      </div>
+    <%}%>
+    <div class="faq-container">
+
+        <% for(let i of user){%>
+            <div class="faq">
+                <h3 class="faq-title"><%=i.name%></h3><br><p><%=i.adminid%></p>
+                <p class="faq-text">
+                 <%=i.email%><br>
+                 <%=i.phone%>
+                 <%if(i.adminid==='na'){%>
+                    <form class="faq-text" action="/assignadmin" method="POST">
+                        <input type="hidden" name="id" value="<%=i._id%>">
+                        <input type="text" name="adminid" required>
+                         <input type="submit" value="Create Admin">
+                     </form>
+                 <%}%>
+                </p>
+                <button class="faq-toggle">
+                  <i class="fas fa-chevron-down"></i>
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+        <%}%>
+     
+        <!-- Javascript Code, Must always be at bottom -->
+    <script src="/js/userdetails.js"></script>
+    <base href="/css-collapsible-cards" />
+  </body>
+</html>

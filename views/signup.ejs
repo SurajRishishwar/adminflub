@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/signup.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <title>
+        <%= title %>
+    </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<img class="admin-signup-image" src="/img/wave.png">
+	<div class="admin-signup">
+		<div class="admin-signup-image-2">
+			<img src="/img/bg.svg">
+		</div>
+		<div class="admin-signup-form">
+			<form action="/createuser" method="POST">
+				<h2 class="admin-title">Sign Up</h2>
+           		<div class="admin-signup-input admin-signup-one">
+           		   <div class="admin-signup-i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="admin-signup-name">
+           		   		<!-- <h5>Full Name</h5> -->
+           		   		<input type="text" name="name" class="admin-signup-inner-input" placeholder="Full Name" required>
+           		   </div>
+           		</div>
+           		<div class="admin-signup-input admin-signup-one">
+           		   <div class="admin-signup-i">
+           		   		<i class="far fa-envelope"></i>
+           		   </div>
+           		   <div class="admin-signup-name">
+           		   		<!-- <h5>Email</h5> -->
+           		   		<input type="email" name="email" class="admin-signup-inner-input" placeholder="Email" required>
+           		   </div>
+           		</div>
+           		<div class="admin-signup-input admin-signup-one">
+           		   <div class="admin-signup-i">
+           		   		<i class="fas fa-phone"></i>
+           		   </div>
+           		   <div class="admin-signup-name">
+           		   		<!-- <h5>Phone Number</h5> -->
+           		   		<input type="text" name="phone" maxlength="10" pattern="\d{10}" class="admin-signup-inner-input" placeholder="Phone Number" required>
+                             
+           		   </div>
+           		</div>	
+           		<div class="admin-signup-input  admin-signup-pass">
+           		   <div class="admin-signup-i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="admin-signup-name">
+           		    	<!-- <h5>Password</h5> -->
+           		    	<input type="password" name="password" class="admin-signup-inner-input" placeholder="Password" required>
+            	   </div>
+            	</div>
+            	<div class="admin-signup-input admin-signup-pass">
+           		   <div class="admin-signup-i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="admin-signup-name">
+           		    	<!-- <h5> Confirm-Password</h5> -->
+           		    	<input type="password" name="confirmpassword" class="admin-signup-inner-input" placeholder="Confirm-Password" required>
+						   <input type="hidden" name="adminid" value="na" required>
+            	   </div>
+            	</div>
+            	<!-- <a href="#" class="admin-confirm-pass">LOG IN</a> -->
+            	<input type="submit" class="admin-signup-btn" value="SIGN UP">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

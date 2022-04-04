@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/css/signin.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <title>
+        <%= title %>
+    </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<img class="admin-image" src="/img/wave.png">
+	<div class="admin">
+		<div class="admin-image-2">
+			<img src="/img/bg.svg">
+		</div>
+		<div class="admin-login">
+			<form action="/signin" method="POST">
+				<img src="/img/avatar.svg">
+				<h2 class="admin-title">Welcome</h2>
+           		<div class="admin-input admin-one">
+           		   <div class="admin-i">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="admin-name">
+           		   		<h5>Username</h5>
+           		   		<input type="email" name="email" required class="admin-inner-input">
+           		   </div>
+           		</div>
+           		<div class="admin-input admin-pass">
+           		   <div class="admin-i"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="admin-name">
+           		    	<h5>Password</h5>
+           		    	<input type="password" name="password" class="admin-inner-input">
+            	   </div>
+            	</div>
+            	<a href="/signup" class="admin-forgot-pass">Sign Up</a>
+            	<input type="submit" class="admin-btn" value="Login">
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/40d67e3e64.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/adminhome.css" >
+    <title>
+        <%=title%>
+    </title>
+  </head>
+  <body>
+      <%if(locals.user){%>
+          
+        <div>
+            <a href="/logout">logout</a>
+        </div>
+      <%}%>
+    <div class="home-container">
+        
+     <div class="home-cont">
+      <div class="home-box home-card">
+        <div class="home-inner"></div>
+        <div class="home-content">
+          <i class="fas fa-user-friends"></i>
+          <h1>User Reg self</h1>
+          <button class="btn" onclick="window.location.href='/userdetails2';" >Check</button> 
+        </div>
+      </div>
+      <div class="home-box home-card">
+        <div class="home-inner"></div>
+        <div class="home-content">
+          <i class="fas fa-user-friends"></i>
+          <h1>User Details</h1>
+          <button class="btn" onclick="window.location.href='/userdetails';" >Check</button> 
+        </div>
+      </div>
+      <div class="home-box home-card">
+        <div class="home-inner"></div>
+        <div class="home-content">
+          <i class="fas fa-user"></i>
+          <h1>User queries</h1>
+           <button class="btn"  onclick="window.location.href='/userqueries';">Check</button>  
+        </div>
+      </div>
+    </div>
+    <div class="home-cont">
+      <div class="home-box home-card">
+        <div class="home-inner"></div>
+        <div class="home-content">
+          <i class="fas fa-users"></i>
+          <h1>Worker Query</h1>
+          <button class="btn"  onclick="window.location.href='/workerquery';">Check</button> 
+        </div>
+      </div>
+      <div class="home-box home-card">
+        <div class="home-inner"></div>
+        <div class="home-content">
+          <i class="fas fa-id-card-alt"></i>
+          <h1>Worker Details</h1>
+          <button class="btn" onclick="window.location.href='/workerdetails';">Check</button> 
+        </div>
+      </div>
+     </div> 
+     <div class="home-cont">
+      <div class="home-box home-card">
+        <div class="home-inner"></div>
+        <div class="home-content">
+          <i class="fas fa-users"></i>
+          <h1>Admin Details</h1>
+          <button class="btn"  onclick="window.location.href='/admindetails';">Check</button> 
+        </div>
+      </div>
+      <div class="home-box home-card">
+        <div class="home-inner"></div>
+        <div class="home-content">
+          <i class="fas fa-id-card-alt"></i>
+          <h1>Contact Queries</h1>
+          <button class="btn" onclick="window.location.href='/contactqueries';">Check</button> 
+        </div>
+      </div>
+     </div> 
+    </div>
+ 
+  </body>
+</html>
+

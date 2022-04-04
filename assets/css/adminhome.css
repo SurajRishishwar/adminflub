@@ -1,0 +1,82 @@
+body{
+    font-family: 'Playfair Display', serif;
+  }
+  .home-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .home-container .home-cont{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   /* <!-- border : 2px solid red; -->*/
+    padding: 20px; 
+  }
+  .home-container .home-cont .home-box{
+    height:200px;
+    width:300px;
+    margin: 30px 30px;
+    background: #fefff0;
+    box-shadow: 5px 5px 10px #666660, -5px -5px 10px #fffefe;
+  }
+  .home-container .home-cont .home-card{
+    border-bottom-left-radius: 40%;
+    border-top-right-radius: 40%;
+  }
+  .home-container .home-cont .home-box .home-inner{
+    height:100px;
+    width:120px;
+    background-image:linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+    box-shadow:5px 5px 10px #bbbbb2, -8px -8px 10px #ffffff;
+    border-bottom-right-radius:85px;
+    border-top-left-radius: 20px;
+   
+  }
+  .home-container .home-cont .home-box .home-content{
+    height:200px;
+    width:200px;
+    margin: 0 50px;
+  }
+  .home-container  .home-cont .home-box .home-content .fas{
+    height: 100px;
+    width: 50px;
+    margin-top: -10px;
+    margin-left: 105px;
+    color: green;
+    font-size: 40px;
+  }
+  .home-container  .home-cont .home-box .home-content h1{
+    margin: -40px 0 0 20px;
+    text-align: center;
+    text-transform : uppercase;
+    font-size: 12px;
+  }
+  .home-container .home-cont .home-box  .home-content .btn{
+    margin: 13px 0 0 100px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+    background-size: 200%;
+    font-size: 1.2rem;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .5s;
+  }
+  .home-container .home-cont .home-box .home-content .btn:hover{
+    background-position: right;
+  }
+  @media screen and (max-width: 900px){
+    .home-container .home-box .home-cont{
+    margin-bottom:1px; 
+  }
+  .home-container .home-box{
+    margin-bottom: 40px;
+  }
+  }
